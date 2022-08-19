@@ -28,6 +28,39 @@ export const getCategories = () => {
     .catch(err => console.log(err));
 };
 
+//delete category
+export const deleteCategory = (CategoryId, userId, token) => {
+  return fetch(`${API}/category/${CategoryId}/${userId}`, {
+    method: "DELETE",
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`
+    }
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => console.log(err));
+};
+
+//update category
+export const updateCategory = (categoryId, userId, token, product) => {
+  return fetch(`${API}/product/${categoryId}/${userId}`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`
+    },
+    body: product
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => console.log(err));
+};
+
+
+
 //products calls
 
 //create a product
