@@ -127,7 +127,7 @@ const ManageCategories =()=> {
       <Link className="btn btn-info" to={`/admin/dashboard`}>
         <span className="">Admin Home</span>
       </Link>
-      {categories && categories.map((category,index) =>{
+      {categories && categories.map((category) =>{
         return(
           <div className="row">
           <div className="col-12">
@@ -138,7 +138,7 @@ const ManageCategories =()=> {
               <div className="col-4">
                 <Link
                   className="btn btn-success"
-                  to={`/admin/category/update/${category._id}`}
+                  to={`/admin/category/update/${category._id}/`}
                 >
                   <span className="">Update</span>
                 </Link>

@@ -28,6 +28,17 @@ export const getCategories = () => {
     .catch(err => console.log(err));
 };
 
+//get a category
+export const getCategory = categoryId => {
+  return fetch(`${API}/category/${categoryId}`, {
+    method: "GET"
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => console.log(err));
+};
+
 //delete category
 export const deleteCategory = (CategoryId, userId, token) => {
   return fetch(`${API}/category/${CategoryId}/${userId}`, {
@@ -44,14 +55,14 @@ export const deleteCategory = (CategoryId, userId, token) => {
 };
 
 //update category
-export const updateCategory = (categoryId, userId, token, product) => {
-  return fetch(`${API}/product/${categoryId}/${userId}`, {
+export const updateCategory = (categoryId, userId, token, category) => {
+  return fetch(`${API}/category/${categoryId}/${userId}`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
       Authorization: `Bearer ${token}`
     },
-    body: product
+    body: category
   })
     .then(response => {
       return response.json();
