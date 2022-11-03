@@ -47,20 +47,23 @@ console.log(user._id)
     setName(event.target.value);
   };
 
-  const onSubmit = event => {
+  const onSubmit = (event, val) => {
     event.preventDefault();
-   
-
+    setError("");
+    setSuccess(false);
+  
     //backend request fired
-    updateCategory(match.params.categoryId,user._id, token, {name}).then(data => {
-      if (data.error) {
-        setError(true);
-      } else {
-        setError(true);
-        setSuccess(true);
-        setName("");
+    updateCategory(match.params.categoryId, user._id, token, { name:val }).then(
+      (data) => {
+        if (data.error) {
+          setError(true);
+        } else {
+          setError("");
+          setSuccess(true);
+          setName("");
+        }
       }
-    });
+    );
   };
 
   const successMessage = () => {
@@ -88,7 +91,7 @@ console.log(user._id)
           required
           placeholder={name}
         />
-        <button onClick={onSubmit} className="btn btn-outline-info">
+        <button onClick={(e)=> onSubmit(e, name)} className="btn btn-outline-info">
          Update Category
         </button>
       </div>
