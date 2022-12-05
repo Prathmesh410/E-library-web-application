@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +25,6 @@
     "lodash": "^4.17.15",
     "mongoose": "^5.12.4",
     "morgan": "^1.9.1",
-    "nodemon": "^1.19.4",
     "npm": "^6.14.13",
     "uuid": "^3.4.0"
   }

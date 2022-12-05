@@ -2,3 +2,5 @@ node_modules
 testback
 testfront
 .env
+.package-lock.json
+package-lock.json

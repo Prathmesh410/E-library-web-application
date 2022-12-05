@@ -3,7 +3,9 @@ const router = express.Router();
 
 const { isSignedIn, isAuthenticated } = require("../controllers/auth");
 const {getUserById} = require("../controllers/user")
-const { getToken, processPayment } = require("../controllers/paymentb");
+const { getToken, processPayment } = require("../controllers/paymentB");
+
+
 router.get("/payment/gettoken/:userId", isSignedIn, isAuthenticated, getToken);
 
 router.post(
