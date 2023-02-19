@@ -59,7 +59,7 @@ const Card = ({ product ,addtoCart = true,
   
   return (
     <div className="card text-white border-outline-warning"  style={{border:"1px  solid #f90"  }}>
-      <div className="card-header lead" style={{backgroundColor:"#FFF9F5" ,border:"none" ,color:"#212832"}} >{cartTitle}</div>
+      <div className="card-header display-6" style={{backgroundColor:"#FFF9F5" ,border:"none" ,color:"#212832"}} >{cartTitle}</div>
       <div className="card-body" style={{backgroundColor:"#FFF9F5"}}>
         {getARedirect(redirect)}
         <ImageHelper product={product} />
