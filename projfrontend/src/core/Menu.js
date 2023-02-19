@@ -7,15 +7,15 @@ import { signout,isAutheticated } from '../auth/helper';
 
 const currentTab = (history,path) =>{
     if(history.location.pathname === path){
-        return{color :"#2ecc72" }  
+        return{color :"#f90" }  
     }
     else{
-        return {color :" #FFFFFF"}
+        return {color :"#212832"}
     }
 }
 const Menu = ({history})=> (
-    <div>
-        <ul className="nav nav-tabs bg-dark">
+    <div style={{backgroundColor:"#F0F4F9" }}>
+        <ul className="nav nav-tabs" >
         <li className="nav-item">
             <Link style={currentTab(history,"/")} className="nav-link" to="/">
                 Home
@@ -61,7 +61,8 @@ const Menu = ({history})=> (
            {isAutheticated() && (
                <li className="nav-item">
                    <span 
-                   className="nav-link text-warning"
+                   className="nav-link"
+                   style={{color : "#b96100"}}
                    onClick={()=>{
                        signout(()=>{
                            history.push("/");

@@ -44,11 +44,9 @@ const loadCheckout =() =>{
 
   return (
     <Base title="Cart Page" description="Ready to cheakout">
-      <div className="row text-center">
-      <div className="col-6">{products?.length>0 ? loadAllProducts(products) :(<h3>No Products in Cart</h3>) }</div>
-      <div className="col-6"><Paymentb products={products} setReload={setReload}/></div>
-         
-        
+      <div className="row text-center" style={{backgroundColor:"#F0F4F9"}}>
+      <div className="col-6"style={{marginTop:"12px",marginBottom:"12px"}} >{products?.length>0 ? loadAllProducts(products) :(<h3>No Products in Cart</h3>) }</div>
+      <div className="col-6" style={{marginTop:"12px",marginBottom:"12px"}}><Paymentb products={products} setReload={setReload}/></div>
       </div>
     </Base>
   );

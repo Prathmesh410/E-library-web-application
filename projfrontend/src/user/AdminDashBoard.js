@@ -11,7 +11,7 @@ const  AdminDashBoard = () => {
 
     const adminLeftSide = () => {
         return (
-            <div className="card">
+            <div className="card " style={{backgroundColor:"#f90"}}>
                 <h3 className="card-header bg-dark text-white">Admin Navigation</h3>
                 <ul className="list-group">
                     <li className="list-group-item">

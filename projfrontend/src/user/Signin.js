@@ -85,7 +85,7 @@ const Signin = () => {
         <div className="col-md-6 offset-sm-3 text-left">
           <form>
             <div className="form-group">
-              <label className="text-light">Email</label>
+              <label style={{color:"#212832"}} className="lead">Email</label>
               <input
                 onChange={handleChange("email")}
                 value={email}
@@ -95,7 +95,7 @@ const Signin = () => {
             </div>
 
             <div className="form-group">
-              <label className="text-light">Password</label>
+              <label style={{color:"#212832"}} className="lead">Password</label>
               <input
                 onChange={handleChange("password")}
                 value={password}
@@ -103,7 +103,7 @@ const Signin = () => {
                 type="password"
               />
             </div>
-            <button onClick={onSubmit} className="btn btn-success btn-block">
+            <button onClick={onSubmit} className="btn rounded btn-block" style={{marginTop:"8px" , backgroundColor:"#f90",color:"#FFF9F5"}}>
               Submit
             </button>
           </form>

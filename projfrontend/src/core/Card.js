@@ -33,7 +33,8 @@ const Card = ({ product ,addtoCart = true,
         addtoCart &&
         <button
         onClick={addToCart}
-        className="btn btn-block btn-outline-success mt-2 mb-2"
+        className="btn btn-block btn-outline mt-2 mb-2 rounded"
+        style={{backgroundColor:"#f90",color:"#FFF9F5" }}
       >
         Add to Cart
       </button>
@@ -47,7 +48,8 @@ const Card = ({ product ,addtoCart = true,
               onClick={() => {removeItemFromCart(product._id);
                 setReload(!reload);
               }}
-              className="btn btn-block btn-outline-danger mt-2 mb-2"
+              className="btn btn-block  mt-2 mb-2 rounded"
+              style={{backgroundColor:"rgb(71 89 107)",color:"#FFF9F5" }}
             >
               Remove from cart
             </button>
@@ -56,15 +58,15 @@ const Card = ({ product ,addtoCart = true,
 
   
   return (
-    <div className="card text-white bg-dark border border-info " >
-      <div className="card-header lead">{cartTitle}</div>
-      <div className="card-body">
+    <div className="card text-white border-outline-warning"  style={{border:"1px  solid #f90"  }}>
+      <div className="card-header lead" style={{backgroundColor:"#FFF9F5" ,border:"none" ,color:"#212832"}} >{cartTitle}</div>
+      <div className="card-body" style={{backgroundColor:"#FFF9F5"}}>
         {getARedirect(redirect)}
         <ImageHelper product={product} />
-        <p className="lead bg-success font-weight-normal text-wrap">
+        <p className="lead  text-wrap " style={{color:"#212832" ,fontSize:"17px"}} >
           {cartDescription}
         </p>
-        <p className="btn btn-success rounded  btn-sm px-4">${cartPrice}</p>
+        <p className="btn  rounded  btn-sm px-4" style={{border:"1px  solid #f90" , color:"#212832" ,fontWeight:"normal"}}>${cartPrice}</p>
         <div className="row">
           <div className="col-12">
            {showAddToCart(addtoCart)}

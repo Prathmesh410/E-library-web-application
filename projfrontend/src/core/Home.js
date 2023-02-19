@@ -29,9 +29,9 @@ export default function Home() {
 
 
   return (
-    <Base title="Home Page" description="welcome to the home page">
-      <div className="row text-center">
-        <h1 className="text-white">All of Products</h1>
+    <Base title="Home Page" description="welcome to the home page" >
+      <div className="row text-center" style={{backgroundColor:"#F0F4F9" , color:"#212832"}}>
+        <h1 style={{color:"#f90" }} className="display-6">All of Products</h1>
         <div className="row">
           {products.map((product,index) =>{
             return(

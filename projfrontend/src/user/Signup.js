@@ -74,19 +74,19 @@ const errorMessage =()=>{
                 <div className="col-md-6 offset-sm-3 text-left">
                     <form >
                         <div className="form-group">
-                            <lable className="text-light">Name</lable>
+                            <lable style={{color:"#212832"}} className="lead">Name</lable>
                             <input className="form-control" onChange={handleChange("name")} type="text"
                             value={name}/>
                         </div>
                         <div className="form-group">
-                            <lable className="text-light">Email</lable>
+                            <lable style={{color:"#212832"}} className="lead">Email</lable>
                             <input className="form-control" onChange={handleChange("email")} type="email" value={email}/>
                         </div>
                         <div className="form-group">
-                            <lable className="text-light">Password</lable>
+                            <lable style={{color:"#212832"}} className="lead">Password</lable>
                             <input className="form-control" onChange={handleChange("password")} type="password" value={password}/>
                         </div>
-                        <button onClick={onSubmit} className="btn btn-success btn-block">Submit</button>
+                        <button onClick={onSubmit} className="btn  rounded  btn-block" style={{marginTop:"8px" , backgroundColor:"#f90",color:"#FFF9F5"}}>Submit</button>
                     </form>
                 </div>
             </div>

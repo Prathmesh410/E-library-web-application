@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #343a40;
+  background: #ffffff;
 }
 
 /* footer{
@@ -15,3 +15,7 @@ body {
   left:0px;
   
 } */
+.outline:hover{
+  background-color: white;
+  color: #f90
+}

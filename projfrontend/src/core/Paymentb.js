@@ -40,7 +40,7 @@ const Paymentb = ({ products, setReload = f => f, reload = undefined }) => {
               options={{ authorization: info.clientToken }}
               onInstance={instance => (info.instance = instance)}
             />
-            <button className="btn btn-block btn-success" onClick={onPurchase}>
+            <button className="btn btn-block rounded" style={{backgroundColor:"#f90"}} onClick={onPurchase}>
               Buy
             </button>
           </div>
