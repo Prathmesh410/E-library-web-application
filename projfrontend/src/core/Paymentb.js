@@ -21,7 +21,7 @@ const Paymentb = ({ products, setReload = f => f, reload = undefined }) => {
 
   const getToken = (userId, token) => {
     getmeToken(userId, token).then(info => {
-      // console.log("INFORMATION", info);
+      
       if (info.error) {
         setInfo({ ...info, error: info.error });
       } else {
@@ -30,7 +30,7 @@ const Paymentb = ({ products, setReload = f => f, reload = undefined }) => {
       }
     });
   };
-
+  console.log("INFORMATION", info);
   const showbtdropIn = () => {
     return (
       <div>
@@ -55,11 +55,14 @@ const Paymentb = ({ products, setReload = f => f, reload = undefined }) => {
     getToken(userId, token);
   }, []);
 
+
   const onPurchase = () => {
     setInfo({ loading: true });
     let nonce;
+    
     let getNonce = info.instance.requestPaymentMethod().then(data => {
       nonce = data.nonce;
+      // console.log("Payment nonce are", nonce);
       const paymentData = {
         paymentMethodNonce: nonce,
         amount: getAmount()

@@ -22,7 +22,6 @@ import Paymentb from "./Paymentb";
 const loadAllProducts = products =>{
     return(
         <div>
-            <h2>This section is load the Products</h2>
             {products.map((product,index) =>(
                <Card
                key={index}
@@ -30,7 +29,7 @@ const loadAllProducts = products =>{
                removeFromCart={true}
                addtoCart={false}
                setReload={setReload}
-               reload={reload}/>
+               reload={reload} />
             ))}
         </div>
     )
