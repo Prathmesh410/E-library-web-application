@@ -133,7 +133,7 @@ const ManageCategories =()=> {
           <div className="col-12">
             <div className="row text-center mb-2 ">
               <div className="col-4">
-                <h3 className="text-left" style={{color : "#b96100"}}>{category.name}</h3>
+                <h3 className="text-left" style={{color :  "rgb(33, 40, 50)"}}>{category.name}</h3>
               </div>
               <div className="col-4">
                 <Link
