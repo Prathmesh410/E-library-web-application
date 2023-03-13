@@ -59,7 +59,7 @@ const ManageProducts = () => {
          {products && products.map((product,index)=>{
             return( <div key={index} className="row text-center mb-2 ">
              <div className="col-4">
-               <h3 className="text-white text-left">{product.name}</h3>
+               <h3 className="text-left" style={{color :  "rgb(33, 40, 50)"}}>{product.name}</h3>
              </div>
              <div className="col-4">
                <Link
